@@ -822,3 +822,136 @@
 # if cod <6999 and cod>21001:
 #         print(f"Precio a pagar con descuento: {pd}")
 
+#================================================================
+
+# NUEVOS EJERCICIOS:
+
+#EJERCICIO PRUEBA 1:
+
+#1) LOTERIA.
+#GENERAR 3 NUMEROS ENTRE 1 Y 9
+#LUEGO TIRAR NUMEROS AL AZAR EN ESE RANGO
+#GENERAR NUMEROS GANADORES DE LOTERIA Y SI ESTOS SON IGUALES A LOS GENERADOS, GANA.
+# LUEGO CONTAR CUANTOS NUMEROS TUVO QUE TIRAR PARA GANAR LA LOTERIA
+ 
+# import random
+# import time
+
+# intentos=0
+
+# n1=random.randint(1,9)
+# n2=random.randint(1,9)
+# n3=random.randint(1,9)
+# t1=False
+# t2=False
+# t3=False
+
+# print(f"Numeros ganadores: {n1} {n2} {n3}")
+# while not t1 or not t2 or not t3:
+#     numero=random.randint(1,9)
+#     print(f"El numero es: {numero}")
+    
+    
+#     if numero==n1:
+#         t1=True
+#     elif numero==n2:
+#         t2=True
+#     elif numero==n3:
+#         t3=True
+
+#     intentos+=+1
+
+# print(f"Ganaste")
+# print(f"Ganaste en {intentos} turnos")
+    
+#================================================================
+
+#EJERCICIO PRUEBA 2:
+
+#Se necesita hacer un algoritmo de productos enlatados
+#Se debe consultar el peso del producto (en gramos) (solo valores positivos)
+#Se debe consultar el porcentaje de sodio (1-100)
+#Y si se vende nacional o internacional
+
+#Criterios:
+
+#Menos de 500grs, lata normal
+#Sodio hasta 1500gr, lata mediana
+#Sodio +1501, lata grande
+#Si el sodio es menos de 5 queda igual.
+#Si es entre 5 y 8, lata especial
+#Si tiene +9, lata acorazada
+#A las latas internacionales, se le debe pegar un sticker y las nacionales no
+#Hacer un resumen de todo
+
+#Codigo:
+
+# prod=int(input("Ingrese el peso del producto (Gramos): "))
+# while prod <1:
+#     print("Debe ser un valor positivo")
+#     prod=int(input("Ingrese el peso del producto (Gramos): "))
+
+
+
+# sodium=int(input("Ingrese el porcentaje de sodio (1-100): "))
+# while sodium <1 or sodium >100:
+#     print("Procentaje Invalido")
+#     sodium=int(input("Ingrese el porcentaje de sodio (1-100): "))
+
+
+
+# inter=int(input('''
+
+# Como se vendera?
+             
+# 1-Internacional
+# 2-Nacionalmente
+             
+             
+# Ingrese valor: '''))
+
+
+
+# while inter <1 or inter >3:
+#        print("Opción Invalida")
+#        inter=int(input('''
+
+# Como se vendera?
+             
+# 1-Internacional
+# 2-Nacionalmente
+             
+             
+# Ingrese valor: '''))
+       
+
+
+# if prod > 0 and prod <= 500:
+#     print("Lata normal")
+
+# elif prod >=501 and prod <=1500:
+#     print("Lata mediana")
+
+# elif prod >1500:
+#     print("Lata grande")
+
+
+
+# if sodium >0 and sodium <5:
+#         print("Lata comun")
+
+# elif sodium >=5 and sodium <8:
+#         print("Lata especial")
+
+# elif sodium >=9:
+#         print("Lata acorazada")
+
+
+
+
+# if inter ==1:
+#             print("Pegue un sticker de validación")
+
+# elif inter == 2:
+#             print("No se debe pegar ningun sticker")
+
