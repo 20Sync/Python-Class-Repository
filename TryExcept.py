@@ -112,4 +112,131 @@
 #             print("Ingrese valores numericos")
 # print(f"Total: {total}")
 
+
+#============================================================
+
+#Ejercicio 4 - Cajero
+
+#Simula un cajero automatico con un saldo inicial de $100.000
+#Solo se puede sacar/ingresar multiplos de 5.000
+
+#(INCOMPLETO. VER LA SOLUCION EN EL DIRECTORIO PYTHON DEL PROFESOR.)
+
+
+# clave=2007
+
+# put=int(input("Ingrese clave: "))
+# while put != clave:
+#     print("Clave Erronea")
+#     put=int(input("Ingrese clave: "))
+
+
+
+# select=0
+# op=0
+# sueldo=100000
+# cartera=5000
+
+
+# while True:
+
+#         print("BIENVENIDO AL SISTEMA")
+#         print("1.- Depositar Dinero")
+#         print("2.- Retirar Dinero")
+#         print("3.- Salir")
+#         select=int(input())
+#         match select:
+#             case 1:
+#                 try:
+#                     op=int(input(f" Saldo: ({sueldo}) Cartera: ({cartera}) Cuanto dinero desea depositar?: "))
+#                     while op <1 or op >cartera:    
+#                             print("Error, valor invalido")
+#                             op=int(input(f" Saldo: ({sueldo}) Cartera: ({cartera}) Cuanto dinero desea depositar?: "))
+                    
+#                     if op %5000!=0:
+#                         print("ERROR: Sollo puedes retirar multiplos de ")
+
+
+#                     sueldo+=op
+#                     cartera-=op
+                        
+#                     print(f'''   
+
+#                         RESUMEN DE CUENTA:
+
+#                         Saldo depositado: {op}  
+#                         Saldo Restante: {sueldo}  
+#                         Saldo Cartera: {cartera}
+
+
+#                         ''')
+                    
+#                 except ValueError as a:
+#                     print("ERROR: Ingrese un valor numerico")
+#             case 2: 
+#                 try:
+#                     op=int(input(f" Saldo: ({sueldo}) Cuanto dinero desea retirar?: "))
+#                     while op <5000 or op >sueldo:
+#                         print("Error, valor invalido")
+#                         op=int(input(f"Monto: ({sueldo}) Cuanto dinero desea retirar?: "))
+
+#                     if op <5000!=0:
+#                         print("ERROR: Ingrese valores multiplos de 5000")
+
+#                     sueldo-=op
+#                     cartera+=op
+                        
+#                     print(f'''   
+
+#                         RESUMEN DE CUENTA:
+
+#                         Saldo Retirado: {op}  
+#                         Saldo Restante: {sueldo}  
+#                         Saldo Cartera: {cartera}
+
+#                         ''')
+                    
+#                 except ValueError as a:
+#                     print("ERROR: Ingrese un valor numerico")
+#             case 3:
+#                 print("Saliendo")
                 
+#             case _:
+#                 print("Opción Invalida")
+
+
+ #USO DEL WHILE
+
+
+# code=4545
+# while True:
+#     pasw=int(input("Ingrese el codigo de 4 digitos: "))
+#     if pasw == code:
+#         print("Bienvenido al sistema")
+#         break
+
+#     else:
+#         print("Codigo Incorrecto")    
+
+
+#Ejercicio 1
+
+
+#Colectivo Femenino
+
+# while True:
+#     sex=input("ingrese su sexo (F/M): ").lower()
+
+#     if sex == "m":
+#         print("Chao machito")
+#         break
+#     else:
+#         print("Bienvenida perrita")    
+        
+
+
+#TEMARIO PROXIMA PRUEBA 26-05
+
+#-Manejo de errores
+#-Uso del while
+#-Try except
