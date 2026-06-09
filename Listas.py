@@ -39,7 +39,7 @@
 #Pop: Para eliminar un elemento de una lista con numeros
 #=============================================================================
 
-#MENU POKEMON - POKEDEX
+# MENU POKEMON - POKEDEX
 
 # pokemons=["Pikachu", "Charizard"]
 # def mostrar():
