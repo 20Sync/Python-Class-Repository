@@ -173,83 +173,83 @@
 
 
 
-pacientes=[
+# pacientes=[
 
-    {"Nombre": "Jairo Medina", "Previsión": "Fonasa", "Temperatura": 36,
-     "Grave": False}
+#     {"Nombre": "Jairo Medina", "Previsión": "Fonasa", "Temperatura": 36,
+#      "Grave": False}
     
-]
+# ]
 
-Previsión=["Fonasa", "Isapre", "Fodesa"]
+# Previsión=["Fonasa", "Isapre", "Fodesa"]
 
-def Prev():
-    print("-"*30)
-    c=1
-    for p in Previsión:
-        print(c,"-", p)
-        c+=1
-        print("-"*30)
+# def Prev():
+#     print("-"*30)
+#     c=1
+#     for p in Previsión:
+#         print(c,"-", p)
+#         c+=1
+#         print("-"*30)
 
-def Agregar():
-    while True:
-        try:
-            name=input("Ingrese el nombre del paciente: ")
-            while name == "" or len(name)<=8:
-                print("ERROR: Debe agregar un nombre que tenga más de 8 letras")
-                name=input("Ingrese el nombre del paciente: ")
-            pacientes.append({"Nombre:", name})
+# def Agregar():
+#     while True:
+#         try:
+#             name=input("Ingrese el nombre del paciente: ")
+#             while name == "" or len(name)<=8:
+#                 print("ERROR: Debe agregar un nombre que tenga más de 8 letras")
+#                 name=input("Ingrese el nombre del paciente: ")
+#             pacientes.append({"Nombre:", name})
 
-            Prev()
-            prev=input("Escriba la previsión del paciente: ")
-            while prev not in ["Fonasa", "Isapre", "Fodesa"]:
-                print("ERROR: Opcion Invalida")
-                prev=input("Escriba la previsión del paciente: ")
-            pacientes.append({"Previsión:", prev})
-
-
-            temp=float(input("Ingrese la temperatura del paciente: "))
-            while temp < 0:
-                print("Error: Caracter Invalido")
-                temp=float(input("Ingrese la temperatura del paciente: "))
-            pacientes.append({"Nombre:", name, "Previsión:", prev, "Temperatura:", temp})
-            break
-
-        except TypeError:
-            print("ERROR: Caracter invalido")
-
-#EDITAR EL CODIGO EN LA CASA
-
-def Eliminar():
-    Mostrar()
-    op=int(input("Que paciente desea eliminar?"))
-
-def Mostrar():
-    print("-"*30)
-    c=1
-    for p in pacientes:
-        print(c,"-", p)
-        c+=1
-        print("-"*30)
+#             Prev()
+#             prev=input("Escriba la previsión del paciente: ")
+#             while prev not in ["Fonasa", "Isapre", "Fodesa"]:
+#                 print("ERROR: Opcion Invalida")
+#                 prev=input("Escriba la previsión del paciente: ")
+#             pacientes.append({"Previsión:", prev})
 
 
+#             temp=float(input("Ingrese la temperatura del paciente: "))
+#             while temp < 0:
+#                 print("Error: Caracter Invalido")
+#                 temp=float(input("Ingrese la temperatura del paciente: "))
+#             pacientes.append({"Nombre:", name, "Previsión:", prev, "Temperatura:", temp})
+#             break
 
-while True:
-    try:
-        print("1.- Ingresar Paciente")
-        print("2.- Eliminar Paciente")
-        print("3.- Mostrar Pacientes")
-        op=int(input(": "))
-        match op:
-            case 1:
-                Agregar()
-            case 2:
-                Eliminar()
-            case 3:
-                Mostrar()
+#         except TypeError:
+#             print("ERROR: Caracter invalido")
+
+# #EDITAR EL CODIGO EN LA CASA
+
+# def Eliminar():
+#     Mostrar()
+#     op=int(input("Que paciente desea eliminar?"))
+
+# def Mostrar():
+#     print("-"*30)
+#     c=1
+#     for p in pacientes:
+#         print(c,"-", p)
+#         c+=1
+#         print("-"*30)
 
 
-    except ValueError as e:
-        print("Error", e)
+
+# while True:
+#     try:
+#         print("1.- Ingresar Paciente")
+#         print("2.- Eliminar Paciente")
+#         print("3.- Mostrar Pacientes")
+#         op=int(input(": "))
+#         match op:
+#             case 1:
+#                 Agregar()
+#             case 2:
+#                 Eliminar()
+#             case 3:
+#                 Mostrar()
+
+
+#     except ValueError as e:
+#         print("Error", e)
 
 
 
