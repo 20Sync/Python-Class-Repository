@@ -173,45 +173,93 @@
 
 
 
-# pacientes=[
+pacientes=[
 
-#     {"Nombre": "Jairo Medina", "Previsión": "Fonasa", "Temperatura": 36,
-#      "Grave": False}
+    {"Nombre": "Jairo Medina", "Previsión": "Fonasa", "Temperatura": 36,
+     "Grave": False}
     
-# ]
+]
 
-# def Agregar():
-#     name=input("Ingrese el nombre del paciente: ")
-#     pacientes.append(name)
+Previsión=["Fonasa", "Isapre", "Fodesa"]
 
-# def Eliminar():
-#     print("")
+def Prev():
+    print("-"*30)
+    c=1
+    for p in Previsión:
+        print(c,"-", p)
+        c+=1
+        print("-"*30)
 
-# def Mostrar():
-#     print("-"*30)
-#     c=1
-#     for p in pacientes:
-#         print(c,"-", p)
-#         c+=1
-#         print("-"*30)
+def Agregar():
+    while True:
+        try:
+            name=input("Ingrese el nombre del paciente: ")
+            while name == "" or len(name)<=8:
+                print("ERROR: Debe agregar un nombre que tenga más de 8 letras")
+                name=input("Ingrese el nombre del paciente: ")
+            pacientes.append({"Nombre:", name})
 
-
-
-# while True:
-#     try:
-#         print("1.- Ingresar Paciente")
-#         print("2.- Eliminar Paciente")
-#         print("3.- Mostrar Pacientes")
-#         op=int(input(": "))
-#         match op:
-#             case 1:
-#                 Agregar()
-#             case 2:
-#                 Agregar()
-#             case 3:
-#                 Mostrar()
+            Prev()
+            prev=input("Escriba la previsión del paciente: ")
+            while prev not in ["Fonasa", "Isapre", "Fodesa"]:
+                print("ERROR: Opcion Invalida")
+                prev=input("Escriba la previsión del paciente: ")
+            pacientes.append({"Previsión:", prev})
 
 
-#     except ValueError as e:
-#         print("Error", e)
+            temp=float(input("Ingrese la temperatura del paciente: "))
+            while temp < 0:
+                print("Error: Caracter Invalido")
+                temp=float(input("Ingrese la temperatura del paciente: "))
+            pacientes.append({"Nombre:", name, "Previsión:", prev, "Temperatura:", temp})
+            break
 
+        except TypeError:
+            print("ERROR: Caracter invalido")
+
+#EDITAR EL CODIGO EN LA CASA
+
+def Eliminar():
+    Mostrar()
+    op=int(input("Que paciente desea eliminar?"))
+
+def Mostrar():
+    print("-"*30)
+    c=1
+    for p in pacientes:
+        print(c,"-", p)
+        c+=1
+        print("-"*30)
+
+
+
+while True:
+    try:
+        print("1.- Ingresar Paciente")
+        print("2.- Eliminar Paciente")
+        print("3.- Mostrar Pacientes")
+        op=int(input(": "))
+        match op:
+            case 1:
+                Agregar()
+            case 2:
+                Eliminar()
+            case 3:
+                Mostrar()
+
+
+    except ValueError as e:
+        print("Error", e)
+
+
+
+# for i in range(juegos):
+#     print(F"INGRESE EL JUEGO {i}")
+
+#     while True:
+#         name=(input("Ingrese nombre del juego"))
+        
+#         if len(name) >=5 and name.isupper() and " " not in name:
+#             break
+#         else:
+#             print("ERROR: Minimo 5 caracteres, sin espacios y en mayusculas")
